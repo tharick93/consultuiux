@@ -1,0 +1,627 @@
+/* ==========================================================================
+   STACKLY LEGAL CONSULTING — SERVICES PAGE (services.css)
+   ========================================================================== */
+
+/* ---------- Section Title Accent ---------- */
+.section-head-title {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 56px;
+}
+
+.section-head-title h2 {
+  font-family: var(--font-head);
+  font-size: 34px;
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.section-head-title.dark-text h2 {
+  color: var(--navy);
+}
+
+.section-head-title h2 span {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+}
+
+.section-head-title h2 span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* ---------- Hero Section (Diagonal Split) ---------- */
+/* ---------- Hero Section ---------- */
+
+/* ==========================================================
+   PREMIUM HERO SECTION
+========================================================== */
+
+
+/* ================= LEFT SIDE ================= */
+
+
+
+.serv-hero-content{
+    max-width:520px;
+}
+
+.serv-hero-content .eyebrow{
+    display:inline-block;
+    color:#A4845B;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:18px;
+    text-transform:uppercase;
+}
+
+.serv-hero-content h1{
+    font-family:var(--font-head);
+    font-size:54px;
+    line-height:1.15;
+    color:#1A365D;
+    margin-bottom:24px;
+    font-weight:600;
+}
+
+.serv-hero-content p{
+    color:#5B6475;
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:36px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.hero-actions .btn{
+    padding:15px 34px;
+    border-radius:50px;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.serv-hero{
+    position:relative;
+    min-height:720px;
+    overflow:hidden;
+}
+
+.serv-hero-left{
+    position:absolute;
+    top:0;
+    left:0;
+    width:52%;
+    height:100%;
+    background:#FAF9F6;
+
+    z-index:10;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 70px;
+
+    clip-path:polygon(0 0,82% 0,100% 50%,82% 100%,0 100%);
+}
+
+.serv-hero-right{
+    position:absolute;
+    top:0;
+    right:0;
+    width:62%;
+    height:100%;
+    z-index:1;
+}
+
+.serv-hero-right img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transform:scale(1.05);
+    transition:0.6s;
+}
+
+.serv-hero-right:hover img{
+    transform:scale(1.1);
+}
+
+/* Dark Overlay */
+
+.serv-hero-right::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to left,
+        rgba(11,19,43,.15),
+        rgba(11,19,43,.45)
+    );
+    z-index:1;
+}
+
+/* Shadow */
+
+.serv-hero-left{
+    box-shadow:25px 0 60px rgba(0,0,0,.18);
+}
+
+/* ================= Responsive ================= */
+
+/* ================= MOBILE HERO ================= */
+
+@media (max-width: 992px){
+
+    .serv-hero{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        min-height:auto;
+    }
+
+    .serv-hero-left{
+        position:relative;
+        width:100%;
+        height:auto;
+        clip-path:none;
+        padding:60px 30px;
+        z-index:2;
+    }
+
+    .serv-hero-right{
+        position:relative;
+        width:100%;
+        height:350px;
+        order:-1; /* Image on top */
+    }
+
+    .serv-hero-right img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    .serv-hero-content{
+        max-width:100%;
+        text-align:center;
+    }
+
+    .hero-actions{
+        justify-content:center;
+    }
+
+    .serv-hero-content h1{
+        font-size:38px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .serv-hero-right{
+        height:260px;
+    }
+
+    .serv-hero-left{
+        padding:40px 20px;
+    }
+
+    .serv-hero-content h1{
+        font-size:30px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero-actions .btn{
+        width:100%;
+    }
+
+}
+.site-header{
+    margin-bottom:0 !important;
+}
+@media(max-width:992px){
+
+.cta-banner-diagonal{
+
+    position:relative;
+    min-height:auto;
+    flex-direction:column;
+
+}
+
+.cta-banner-bg{
+
+    position:relative;
+    width:100%;
+    height:300px;
+
+}
+
+.cta-banner-clip{
+
+    position:relative;
+    width:100%;
+    height:auto;
+
+    clip-path:none;
+    margin-left:0;
+
+    padding:50px 30px;
+
+}
+
+.cta-banner-content{
+
+    max-width:100%;
+    text-align:center;
+
+}
+
+.hero-actions{
+
+    justify-content:center;
+
+}
+
+}
+/* ---------- Section 1: 4 White Cards ---------- */
+.serv-cards-section {
+  padding: 80px 0;
+  background: var(--navy);
+}
+
+.serv-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.serv-card-box {
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.serv-card-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(197, 168, 128, 0.1);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.serv-card-box h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.serv-card-box p {
+  font-size: 13.5px;
+  color: #4A5568;
+  line-height: 1.6;
+}
+
+/* ---------- Section 2: Stacked Blue Bars ---------- */
+.why-services-section {
+  padding: 80px 0;
+  background: #FAF9F6;
+}
+
+.why-bars-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.why-bar-item {
+  background: #1C4E80;
+  color: #FFFFFF;
+  border-radius: 6px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(28, 78, 128, 0.15);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.why-bar-item:hover {
+  background: #153E66;
+  transform: translateX(6px);
+}
+
+.bar-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFFFFF;
+}
+
+.bar-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+.bar-text strong {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.bar-text span {
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* ---------- Section 3: Process Steps Flow ---------- */
+.process-steps-section {
+  padding: 80px 0;
+  background: var(--navy);
+}
+
+.steps-flow-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.step-flow-card {
+  text-align: center;
+  padding: 20px 16px;
+}
+
+.step-circle-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.step-flow-card:hover .step-circle-icon {
+  background: var(--gold);
+  color: var(--navy);
+  transform: scale(1.08);
+}
+
+.step-num-tag {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.step-flow-card h3 {
+  font-family: var(--font-head);
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.step-flow-card p {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+/* ---------- Section 4: Testimonials ---------- */
+.trust-review-section {
+  padding: 80px 0;
+  background: var(--navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trust-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.review-card-box {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.review-card-box:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.profile-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+}
+
+.profile-meta h4 {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.profile-meta span {
+  color: var(--gold-light);
+  font-size: 12.5px;
+  opacity: 0.85;
+}
+
+.review-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.star-rating {
+  color: #F59E0B;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* ---------- Section 5: CTA Banner Diagonal ---------- */
+.cta-banner-diagonal {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #0B132B;
+}
+
+.cta-banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/Rectangle\ 333.png') center/cover no-repeat;
+  z-index: 1;
+}
+
+.cta-banner-clip {
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+  width: 58%;
+  min-height: 380px;
+  background: #FAF9F6;
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  padding: 50px 8% 50px 14%;
+}
+
+.cta-banner-content h2 {
+  font-family: var(--font-head);
+  font-size: 32px;
+  color: #1A365D;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.cta-banner-content p {
+  color: #4A5568;
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+@media (max-width: 1024px) {
+  .serv-cards-grid,
+  .steps-flow-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .trust-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .serv-hero-clip,
+  .cta-banner-clip {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .serv-hero-diagonal,
+  .cta-banner-diagonal {
+    min-height: auto;
+  }
+
+  .serv-hero-clip {
+    width: 100%;
+    clip-path: none;
+    padding: 60px 24px;
+  }
+
+  .cta-banner-clip {
+    width: 100%;
+    clip-path: none;
+    padding: 60px 24px;
+  }
+
+  .serv-cards-grid,
+  .steps-flow-row,
+  .trust-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .serv-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .why-bar-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}

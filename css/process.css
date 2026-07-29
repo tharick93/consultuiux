@@ -1,0 +1,359 @@
+/* ==========================================================================
+   STACKLY LEGAL CONSULTING — PROCESS PAGE SPECIFIC (process.css)
+   ========================================================================== */
+
+/* ---------- Process Hero (Diagonal Split) ---------- */
+.proc-hero {
+  position: relative;
+  min-height: 720px;
+  overflow: hidden;
+}
+
+.proc-hero-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52%;
+  height: 100%;
+  background: var(--cream);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 70px;
+  clip-path: polygon(0 0, 82% 0, 100% 50%, 82% 100%, 0 100%);
+  box-shadow: 25px 0 60px rgba(0, 0, 0, 0.18);
+}
+
+.proc-hero-content {
+  max-width: 520px;
+}
+
+.proc-hero h1 {
+  font-size: 42px;
+  color: var(--navy);
+  margin: 12px 0 20px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.proc-hero p {
+  color: var(--gray);
+  font-size: 16.5px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.proc-hero-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 62%;
+  height: 100%;
+  z-index: 1;
+}
+
+.proc-hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.05);
+  transition: 0.6s;
+}
+
+.proc-hero-right:hover img {
+  transform: scale(1.1);
+}
+
+.proc-hero-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    rgba(11, 19, 43, .15),
+    rgba(11, 19, 43, .45)
+  );
+  z-index: 1;
+}
+
+/* ---------- Timeline Section ---------- */
+.timeline-section {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 820px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 56px;
+  width: 2px;
+  background: var(--border);
+  z-index: 1;
+}
+
+.tl-item {
+  background: var(--cream);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  padding: 24px 40px;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.tl-item:hover {
+  transform: translateX(8px);
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.tl-item .tl-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--navy);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.tl-item:hover .tl-icon {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.tl-text {
+  flex: 1;
+  text-align: left;
+}
+
+.tl-text h3 {
+  color: var(--navy);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.tl-text p {
+  color: var(--gray);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* ---------- Process Banner ---------- */
+.proc-banner {
+  background: var(--navy);
+  color: var(--white);
+  padding: 60px 0;
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+}
+
+.proc-banner-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.proc-banner-copy {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.proc-banner-copy .icon-circle {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 24px;
+}
+
+.proc-banner-copy h3 {
+  font-size: 22px;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.proc-banner-copy p {
+  color: var(--gold-light);
+  opacity: 0.8;
+  font-size: 14.5px;
+}
+
+/* ---------- Features Grid ---------- */
+.features-section {
+  padding: 100px 0;
+  background: var(--cream);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.features-grid > div {
+  background: var(--white);
+  padding: 40px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.features-grid > div:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+}
+
+.f-icon {
+  font-size: 32px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: var(--gold-dark);
+}
+
+.features-grid h3 {
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.features-grid p {
+  font-size: 13.5px;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+/* ---------- Process Responsive ---------- */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .proc-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding: 0;
+  }
+  .proc-hero-left {
+    position: relative;
+    width: 100%;
+    height: auto;
+    clip-path: none;
+    padding: 60px 30px;
+    z-index: 2;
+    box-shadow: none;
+  }
+  .proc-hero-right {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    order: -1;
+  }
+  .proc-hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .proc-hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .proc-hero h1 {
+    font-size: 34px;
+  }
+  .proc-hero .hero-actions {
+    justify-content: center;
+  }
+  .timeline-section,
+  .features-section {
+    padding: 60px 0;
+  }
+  .timeline::before {
+    left: 26px;
+  }
+  .tl-item {
+    padding: 20px 24px;
+    gap: 20px;
+  }
+  .tl-item .tl-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .proc-banner-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .proc-banner-copy {
+    flex-direction: column;
+    text-align: center;
+  }
+  .timeline::before {
+    display: none;
+  }
+  .tl-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .tl-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .proc-hero-right {
+    height: 260px;
+  }
+  .proc-hero-left {
+    padding: 40px 20px;
+  }
+  .proc-hero h1 {
+    font-size: 30px;
+  }
+  .proc-hero .hero-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .proc-hero .hero-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,188 @@
+/* ==========================================================================
+   STACKLY LEGAL CONSULTING — SIGNUP SPECIFIC (signup.css)
+   ========================================================================== */
+
+body.auth-body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  background: var(--navy);
+  color: var(--ink);
+}
+
+.signup-page {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  min-height: 100vh;
+}
+
+/* ---------- Left Brand Sidebar ---------- */
+.signup-left {
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 40px;
+  border-right: 1px solid var(--border-light);
+}
+
+.brand-blob {
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-blob svg {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+}
+
+.signup-left h1 {
+  font-size: 34px;
+  color: var(--navy);
+  font-weight: 800;
+  line-height: 1.3;
+  margin-top: auto;
+  font-family: var(--font-head);
+}
+
+.signup-left p {
+  font-size: 18px;
+  color: var(--gold-dark);
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+/* ---------- Right Panel ---------- */
+.signup-right {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  position: relative;
+}
+
+.signup-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 20%, rgba(197, 168, 128, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.signup-box {
+  width: 100%;
+  max-width: 440px;
+  background: var(--white);
+  padding: 50px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.signup-box h2 {
+  color: var(--navy);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+  font-family: var(--font-head);
+}
+
+.signup-box label {
+  display: block;
+  color: var(--navy-light);
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.signup-box input {
+  width: 100%;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  font-size: 14.5px;
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.signup-box input:focus {
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15);
+}
+
+.signup-box input::placeholder {
+  color: var(--gray-light);
+}
+
+.btn-white {
+  width: 100%;
+  background: var(--gold);
+  color: var(--navy-dark);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 8px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-white:hover {
+  background: var(--gold-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(197, 168, 128, 0.25);
+}
+
+.switch-text {
+  text-align: center;
+  color: var(--gray);
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+.switch-text a {
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+.switch-text a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+/* ---------- Signup Responsive ---------- */
+@media (max-width: 900px) {
+  .signup-page {
+    grid-template-columns: 1fr;
+  }
+  .signup-left {
+    display: none;
+  }
+  .signup-box {
+    padding: 40px 24px;
+  }
+}

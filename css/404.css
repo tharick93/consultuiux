@@ -1,0 +1,107 @@
+/* ==========================================================================
+   STACKLY LEGAL CONSULTING — 404 NOT FOUND SPECIFIC (404.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.notfound-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at 50% 50%, #1C2541 0%, #0B132B 100%);
+  padding: 30px;
+  position: relative;
+}
+
+.notfound-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(197, 168, 128, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.big-404 {
+  font-family: 'Playfair Display', serif;
+  font-size: 150px;
+  font-weight: 700;
+  font-style: italic;
+  color: #C5A880;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  line-height: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.oops {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 20px 0 40px;
+  max-width: 480px;
+  line-height: 1.4;
+}
+
+.btn-try {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #C5A880;
+  color: #C5A880;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-try:hover {
+  background: #C5A880;
+  color: #0B132B;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(197, 168, 128, 0.2);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 600px) {
+  .big-404 {
+    font-size: 100px;
+  }
+  .oops {
+    font-size: 24px;
+    margin: 16px 0 32px;
+  }
+  .btn-try {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+}

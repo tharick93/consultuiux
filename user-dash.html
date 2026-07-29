@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Stackly Legal Consulting</title>
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M15.5 2c-4 0-7.5 2.5-7.5 6 0 2.7 2 4 4.5 4.7-3.2.7-6 2.7-6 5.8 0 3.3 3.3 5.5 7.5 5.5 3.8 0 6.5-1.8 6.5-1.8l-1.2-2.6s-2 1.4-4.6 1.4c-2.6 0-4-1.2-4-2.6 0-1.9 2.5-2.6 5-3.2 3.2-.7 5.3-2.6 5.3-5.2 0-3.2-2.8-5.7-7-5.7-2 0-3.4.6-3.4.6l1.2 2.6s1-.5 2.2-.5z" fill="#fff"/></svg>
+      <span><strong>STACKLY</strong><small>LEGAL CONSULTING</small></span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="active">🏠 Dashboard</a>
+      <a href="#">🗂️ Clients</a>
+      <a href="#">📋 Matters</a>
+      <a href="#">📅 Calendar</a>
+      <a href="#">✅ Tasks</a>
+      <a href="#">📄 Documents</a>
+      <a href="#">🧾 Invoices</a>
+      <a href="#">⏱️ Time Tracking</a>
+      <a href="#">📊 Reports</a>
+      <a href="#">💬 Messages</a>
+      <a href="#">⚙️ Settings</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="avatar-circle">JD</div>
+      <div>
+        <strong>John Due</strong>
+        <span>Senior Attorney</span>
+        <span class="online">● Online</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-area">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn">&#9776;</button>
+      <div class="search-box">🔍 <input type="text" placeholder="Search anything....."></div>
+      <div class="topbar-actions">
+        <button aria-label="Notifications">🔔</button>
+        <button aria-label="Messages">💬</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <h1 class="page-title">Dashboard</h1>
+      <p class="page-sub">Welcome back John, here's what's happening with your practice today</p>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-icon">👜</div><span class="stat-label">Total Matters</span><strong class="stat-value">48</strong><span class="stat-change up">↑ 12% from last month</span></div>
+        <div class="stat-card"><div class="stat-icon">👥</div><span class="stat-label">Active Clients</span><strong class="stat-value">36</strong><span class="stat-change up">↑ 8% from last month</span></div>
+        <div class="stat-card"><div class="stat-icon">📋</div><span class="stat-label">Pending Tasks</span><strong class="stat-value">14</strong><span class="stat-change down">↓ 5% from last month</span></div>
+        <div class="stat-card"><div class="stat-icon">💲</div><span class="stat-label">Outstanding Invoices</span><strong class="stat-value">$24,560</strong><span class="stat-change up">↑ 10% from last month</span></div>
+      </div>
+
+      <div class="row-2">
+        <div class="panel">
+          <div class="panel-head"><h3>Matters &amp; Overview</h3><select><option>This Month</option><option>This Year</option></select></div>
+          <div class="donut-wrap">
+            <div class="donut" style="--p1:50;--p2:31;--p3:12;--p4:7;"><span>128<small>Total</small></span></div>
+            <ul class="legend">
+              <li><i style="background:#2f6fed"></i>Cooperate Law <b>64 (50%)</b></li>
+              <li><i style="background:#2fbf71"></i>Family Law <b>40 (31%)</b></li>
+              <li><i style="background:#f2b134"></i>Litigation <b>16 (12%)</b></li>
+              <li><i style="background:#c9ccd1"></i>Others <b>8 (7%)</b></li>
+            </ul>
+          </div>
+          <a href="#" class="panel-link">View all matters →</a>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Recent Matters</h3><a href="#" class="panel-link">View all</a></div>
+          <table class="table">
+            <thead><tr><th>Client</th><th>Matter Name</th><th>Next Action</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Arjun Patel</td><td>Smith vs.ABC company</td><td>Review</td><td><span class="badge orange">In Progress</span></td></tr>
+              <tr><td>Sneha Reddy</td><td>Johnson Family Case</td><td>Meeting</td><td><span class="badge blue">Open</span></td></tr>
+              <tr><td>Karthik S</td><td>Real Estate Purchase</td><td>Review</td><td><span class="badge green">In Progress</span></td></tr>
+              <tr><td>Ananya lyer</td><td>Divorce Settlement</td><td>Documents</td><td><span class="badge red">On Hold</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row-3">
+        <div class="panel">
+          <div class="panel-head"><h3>Task Overview</h3><select><option>This Month</option></select></div>
+          <div class="gauge-wrap">
+            <div class="gauge"><span>72%<small>Average Progress</small></span></div>
+          </div>
+          <div class="task-legend">
+            <div><i style="background:#2fbf71"></i>Completed <b>40</b></div>
+            <div><i style="background:#2f6fed"></i>Active <b>64</b></div>
+            <div><i style="background:#e0455f"></i>At Risk <b>12</b></div>
+          </div>
+          <a href="#" class="panel-link">View Progress reports →</a>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Mentor Overview</h3><a href="#" class="panel-link">View all</a></div>
+          <ul class="mentor-list">
+            <li><div class="avatar-circle sm blue">RK</div><div><strong>Ravi Kumar</strong><span>Document Review</span></div><b>12<small>Mentored</small></b></li>
+            <li><div class="avatar-circle sm green">PS</div><div><strong>Priya sharama</strong><span>Meeting</span></div><b>8<small>Mentored</small></b></li>
+            <li><div class="avatar-circle sm purple">AS</div><div><strong>Anil Singh</strong><span>Contracts Review</span></div><b>10<small>Mentored</small></b></li>
+          </ul>
+          <a href="#" class="panel-link">Manage Mentors</a>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Up Coming Events</h3></div>
+          <ul class="events-list">
+            <li><span class="ev-icon">👥</span><div><strong>Client Meeting</strong><span>10:00 AM - 11:00 AM</span></div><i>›</i></li>
+            <li><span class="ev-icon">📋</span><div><strong>Court Hearing</strong><span>02:00 PM - 03:30 PM</span></div><i>›</i></li>
+            <li><span class="ev-icon">📄</span><div><strong>Document Review</strong><span>11:00 AM - 12:00 PM</span></div><i>›</i></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="js/dashboard.js">
+  document.getElementById('menuBtn')?.addEventListener('click', () => {
+  document.getElementById('sidebar')?.classList.toggle('open');
+});
+</script>
+</body>
+</html>

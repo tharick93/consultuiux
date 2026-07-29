@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Stackly Legal Consulting</title>
+<link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M15.5 2c-4 0-7.5 2.5-7.5 6 0 2.7 2 4 4.5 4.7-3.2.7-6 2.7-6 5.8 0 3.3 3.3 5.5 7.5 5.5 3.8 0 6.5-1.8 6.5-1.8l-1.2-2.6s-2 1.4-4.6 1.4c-2.6 0-4-1.2-4-2.6 0-1.9 2.5-2.6 5-3.2 3.2-.7 5.3-2.6 5.3-5.2 0-3.2-2.8-5.7-7-5.7-2 0-3.4.6-3.4.6l1.2 2.6s1-.5 2.2-.5z" fill="#fff"/></svg>
+      <span><strong>STACKLY</strong><small>LEGAL CONSULTING</small></span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="admin-dashboard.html" class="active">🏠 Dashboard</a>
+      <a href="#">🗂️ Clients</a>
+      <a href="#">📋 Matters</a>
+      <a href="#">📅 Calendar</a>
+      <a href="#">✅ Tasks</a>
+      <a href="#">📄 Documents</a>
+      <a href="#">🧾 Invoices</a>
+      <a href="#">⏱️ Time Tracking</a>
+      <a href="#">📊 Reports</a>
+      <a href="#">💬 Messages</a>
+      <a href="#">⚙️ Settings</a>
+    </nav>
+    <div class="sidebar-org">
+      <span class="org-icon">🛡️</span>
+      <div><strong>Stackly Legal Consulting</strong><span>Super Admin</span></div>
+      <i>›</i>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn">&#9776;</button>
+      <div class="topbar-title"><strong>Dashboard</strong><span>Welcome back john here's what's happening with your practice today</span></div>
+      <div class="search-box">🔍 <input type="text" placeholder="Search anything....."></div>
+      <div class="topbar-actions">
+        <button aria-label="Notifications">🔔</button>
+        <div class="admin-chip">
+          <div class="avatar-circle">A</div>
+          <div><strong>Admin</strong><span>System administrator</span></div>
+          <i>⌄</i>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-icon">👥</div><span class="stat-label">Total Clients</span><strong class="stat-value">1,248</strong><span class="stat-change up">↑ 12% from last month</span></div>
+        <div class="stat-card"><div class="stat-icon">👜</div><span class="stat-label">Total Matters</span><strong class="stat-value">836</strong><span class="stat-change up">↑ 8% from last month</span></div>
+        <div class="stat-card"><div class="stat-icon">📋</div><span class="stat-label">Total Invoices</span><strong class="stat-value">532</strong><span class="stat-change up">↑ 5% from last month</span></div>
+        <div class="stat-card"><div class="stat-icon">💲</div><span class="stat-label">Total Revenue</span><strong class="stat-value">$245,660</strong><span class="stat-change up">↑ 10% from last month</span></div>
+      </div>
+
+      <div class="row-2">
+        <div class="panel">
+          <div class="panel-head"><h3>Matters &amp; Overview</h3><select><option>This Month</option><option>This Year</option></select></div>
+          <div class="donut-wrap">
+            <div class="donut" style="--p1:50;--p2:31;--p3:12;--p4:7;"><span>856<small>Total</small></span></div>
+            <ul class="legend">
+              <li><i style="background:#2f6fed"></i>Cooperate Law <b>64 (50%)</b></li>
+              <li><i style="background:#2fbf71"></i>Family Law <b>40 (31%)</b></li>
+              <li><i style="background:#f2b134"></i>Litigation <b>16 (12%)</b></li>
+              <li><i style="background:#c9ccd1"></i>Others <b>8 (7%)</b></li>
+            </ul>
+          </div>
+          <a href="#" class="panel-link">View all matters →</a>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Matters by Status</h3><div class="inc-exp"><span class="inc">▲ Income</span><span class="exp">▼ Expense</span></div></div>
+          <svg viewBox="0 0 420 200" class="line-chart">
+            <polyline points="0,150 40,110 80,140 120,90 160,120 200,70 240,100 280,60 320,130 360,40 400,90" fill="none" stroke="#2f6fed" stroke-width="3"/>
+            <polyline points="240,100 280,60 320,130 360,40 400,90" fill="none" stroke="#e0455f" stroke-width="3"/>
+          </svg>
+          <div class="chart-axis"><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+        </div>
+      </div>
+
+      <div class="row-3">
+        <div class="panel">
+          <div class="panel-head"><h3>Task Overview</h3><select><option>This Month</option></select></div>
+          <div class="gauge-wrap"><div class="gauge" style="background:conic-gradient(from 180deg,#2f6fed 0 90%,#e5e7eb 0 100%)"><span>90%<small>Average Progress</small></span></div></div>
+          <div class="task-legend">
+            <div><i style="background:#2fbf71"></i>Completed <b>40</b></div>
+            <div><i style="background:#2f6fed"></i>Active <b>64</b></div>
+            <div><i style="background:#e0455f"></i>At Risk <b>12</b></div>
+          </div>
+          <a href="#" class="panel-link">View Progress reports →</a>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Revenue</h3><a href="#" class="panel-link">View Details</a></div>
+          <svg viewBox="0 0 300 160" class="line-chart">
+            <polyline points="0,100 40,70 80,110 120,50 160,90 200,40 240,80 280,60" fill="none" stroke="#16283f" stroke-width="3"/>
+          </svg>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Revenue Overview</h3><select><option>This Month</option></select></div>
+          <strong class="stat-value">$245,660</strong>
+          <span class="stat-change up" style="display:block;margin-bottom:14px;">↑ 18.6 vs last month</span>
+          <div class="pie" style="background:conic-gradient(#2f6fed 0 72%, #16283f 0 100%)"></div>
+          <a href="#" class="panel-link">View Progress reports →</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="js/admin-dashboard.js">
+  document.getElementById('menuBtn')?.addEventListener('click', () => {
+  document.getElementById('sidebar')?.classList.toggle('open');
+});
+</script>
+</body>
+</html>
