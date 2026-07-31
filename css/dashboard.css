@@ -686,54 +686,251 @@ ul {
   font-weight: 600;
 }
 
-/* ---------- User Dashboard Responsive ---------- */
+/* ==========================================================================
+   RESPONSIVE — ALL DEVICES
+   Breakpoints: 1400 (large desktop) -> 1200 (small desktop/laptop)
+   -> 991 (tablet landscape) -> 800 (tablet portrait) -> 560 (large phone)
+   -> 400 (small phone). Mobile-first overrides cascade downward.
+   ========================================================================== */
+
+/* ---------- Large desktop / wide monitors ---------- */
+@media (max-width: 1400px) {
+  .content {
+    padding: 26px;
+  }
+}
+
+/* ---------- Small desktop / laptop ---------- */
 @media (max-width: 1200px) {
   .stat-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .row-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .row-3 .panel:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
+/* ---------- Tablet landscape ---------- */
 @media (max-width: 991px) {
   .row-2, .row-3 {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
+  .row-3 .panel:last-child {
+    grid-column: auto;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .content {
+    padding: 22px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
 }
 
+/* ---------- Tablet portrait / sidebar collapses to drawer ---------- */
 @media (max-width: 800px) {
+  .app-shell {
+    position: relative;
+  }
+
   .sidebar {
     position: fixed;
     left: -260px;
     z-index: 1000;
     transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  
+
   .sidebar.open {
     left: 0;
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.25);
   }
-  
+
   .menu-btn {
     display: block;
   }
-  
+
   .topbar {
-    padding: 16px 20px;
+    padding: 14px 20px;
+    gap: 14px;
   }
-  
+
   .search-box {
     max-width: 260px;
   }
-  
+
   .content {
     padding: 20px;
   }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .panel {
+    padding: 20px;
+  }
+
+  .donut-wrap {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
+/* ---------- Large phones ---------- */
 @media (max-width: 560px) {
   .stat-grid {
     grid-template-columns: 1fr;
   }
+
   .search-box {
     display: none;
+  }
+
+  .topbar {
+    padding: 12px 16px;
+  }
+
+  .topbar-actions {
+    gap: 12px;
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+
+  .page-sub {
+    font-size: 12.5px;
+    margin-bottom: 18px;
+  }
+
+  .panel {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .panel-head {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .stat-card {
+    padding: 18px;
+  }
+
+  .stat-value {
+    font-size: 22px;
+  }
+
+  .table {
+    font-size: 12.5px;
+  }
+
+  .table-wrap {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mentor-list b,
+  .events-list i {
+    font-size: 13px;
+  }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 400px) {
+  .sidebar {
+    width: 85%;
+    left: -85%;
+  }
+
+  .avatar-circle {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .stat-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+
+  .donut {
+    width: 120px;
+    height: 120px;
+  }
+
+  .donut::before {
+    width: 82px;
+    height: 82px;
+  }
+
+  .gauge {
+    width: 120px;
+    height: 68px;
+  }
+
+  .gauge::before {
+    width: 86px;
+    height: 43px;
+  }
+
+  .events-list li,
+  .mentor-list li {
+    gap: 10px;
+  }
+}
+
+/* ---------- Short / landscape phones ---------- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .sidebar {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .content {
+    padding: 14px 20px;
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---------- High-density / print safety (optional, harmless on screen) ---------- */
+@media print {
+  .sidebar, .menu-btn, .topbar-actions {
+    display: none !important;
+  }
+
+  .main-area {
+    width: 100%;
+  }
+
+  .panel, .stat-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
   }
 }

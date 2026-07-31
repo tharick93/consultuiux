@@ -666,3 +666,227 @@ ul {
     display: none;
   }
 }
+/* ==========================================
+   Enhanced Admin Dashboard Responsive
+========================================== */
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .stat-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .row-2{
+        grid-template-columns:1fr;
+    }
+
+    .row-3{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* Tablet */
+@media (max-width:992px){
+
+    .sidebar{
+        position:fixed;
+        left:-260px;
+        top:0;
+        width:260px;
+        height:100vh;
+        z-index:1000;
+        transition:.35s ease;
+    }
+
+    .sidebar.open{
+        left:0;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .topbar{
+        padding:16px 20px;
+    }
+
+    .search-box{
+        width:220px;
+    }
+
+    .content{
+        padding:20px;
+    }
+
+    .row-2,
+    .row-3{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width:768px){
+
+    .topbar{
+        padding:15px;
+        gap:12px;
+        flex-wrap:wrap;
+    }
+
+    .topbar-title strong{
+        font-size:16px;
+    }
+
+    .topbar-title span{
+        display:none;
+    }
+
+    .search-box{
+        width:100%;
+        order:3;
+        margin:0;
+    }
+
+    .topbar-actions{
+        gap:10px;
+    }
+
+    .admin-chip{
+        padding-left:10px;
+    }
+
+    .content{
+        padding:15px;
+    }
+
+    .stat-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .stat-card{
+        padding:20px;
+    }
+
+    .panel{
+        padding:20px;
+    }
+
+    .donut-wrap{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .legend{
+        width:100%;
+    }
+
+}
+
+
+/* Small Mobile */
+@media (max-width:576px){
+
+    .topbar{
+        padding:12px;
+    }
+
+    .search-box{
+        display:none;
+    }
+
+    .content{
+        padding:12px;
+    }
+
+    .stat-card{
+        padding:18px;
+    }
+
+    .stat-value{
+        font-size:22px;
+    }
+
+    .panel{
+        padding:16px;
+    }
+
+    .panel-head{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .panel-head h3{
+        font-size:15px;
+    }
+
+    .panel-head select{
+        width:100%;
+    }
+
+    .donut{
+        width:120px;
+        height:120px;
+    }
+
+    .donut::before{
+        width:82px;
+        height:82px;
+    }
+
+    .gauge{
+        width:120px;
+        height:70px;
+    }
+
+    .gauge::before{
+        width:85px;
+        height:42px;
+    }
+
+    .pie{
+        width:100px;
+        height:100px;
+    }
+
+    .pie::before{
+        width:68px;
+        height:68px;
+    }
+
+}
+
+
+/* Extra Small */
+@media (max-width:400px){
+
+    .content{
+        padding:10px;
+    }
+
+    .stat-card,
+    .panel{
+        padding:14px;
+    }
+
+    .stat-value{
+        font-size:20px;
+    }
+
+    .sidebar{
+        width:240px;
+        left:-240px;
+    }
+
+    .sidebar.open{
+        left:0;
+    }
+
+}

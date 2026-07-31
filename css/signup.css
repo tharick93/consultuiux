@@ -186,3 +186,128 @@ body.auth-body {
     padding: 40px 24px;
   }
 }
+/* ==========================================
+   Signup Responsive
+========================================== */
+
+/* Large Tablet */
+@media (max-width:992px){
+
+    .signup-page{
+        grid-template-columns:1fr;
+    }
+
+    .signup-left{
+        display:none;
+    }
+
+    .signup-right{
+        padding:40px 25px;
+    }
+
+    .signup-box{
+        max-width:500px;
+        padding:40px 30px;
+    }
+
+}
+
+
+/* Tablet */
+@media (max-width:768px){
+
+    .signup-right{
+        padding:30px 18px;
+    }
+
+    .signup-box{
+        max-width:100%;
+        padding:35px 25px;
+        border-radius:18px;
+    }
+
+    .signup-box h2{
+        font-size:22px;
+    }
+
+    .signup-box label{
+        font-size:13px;
+    }
+
+    .signup-box input{
+        padding:12px 14px;
+        font-size:14px;
+    }
+
+    .btn-white{
+        padding:13px;
+        font-size:14px;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width:576px){
+
+    .signup-right{
+        padding:20px 15px;
+    }
+
+    .signup-box{
+        padding:28px 18px;
+        border-radius:16px;
+    }
+
+    .signup-box h2{
+        font-size:20px;
+    }
+
+    .signup-box label{
+        font-size:12px;
+    }
+
+    .signup-box input{
+        padding:11px 12px;
+        margin-bottom:18px;
+        font-size:14px;
+    }
+
+    .btn-white{
+        padding:12px;
+        font-size:14px;
+    }
+
+    .switch-text{
+        font-size:13px;
+    }
+
+}
+
+
+/* Small Mobile */
+@media (max-width:400px){
+
+    .signup-right{
+        padding:15px 10px;
+    }
+
+    .signup-box{
+        padding:22px 15px;
+    }
+
+    .signup-box h2{
+        font-size:18px;
+    }
+
+    .signup-box input{
+        padding:10px 12px;
+        font-size:13px;
+    }
+
+    .btn-white{
+        padding:11px;
+        font-size:13px;
+    }
+
+}
